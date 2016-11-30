@@ -14,7 +14,7 @@ function copyToClipboard(text) {
 function slugify(text) {
   return text.toLowerCase().trim()
     .replace(/&/g, '-and-')
-    .replace(/[\s\W-]+/g, '-')
+    .replace(/[\s\W-_]+/g, '-')
     .replace(/^-+|-+$/g, '')
 }
 

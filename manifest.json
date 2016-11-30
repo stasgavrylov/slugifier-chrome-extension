@@ -1,7 +1,7 @@
 {
   "name": "Slugifier",
-  "description": "Turns your selection into-a-slug",
-  "version": "1.0.0",
+  "description": "Turns your selected text into-a-slug",
+  "version": "1.0.1",
   "permissions": ["contextMenus", "clipboardWrite"],
   "background": {
     "scripts": ["slugifier.js"]
