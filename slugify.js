@@ -19,7 +19,7 @@ function slugify(text) {
 }
 
 chrome.contextMenus.create({
-  "title": 'Slugify',
+  "title": 'Slugifier',
   "contexts":['selection'],
   "onclick": slugifySelection,
 })
