@@ -1,0 +1,10 @@
+{
+  "name": "Slugifier",
+  "description": "Turns your selection into-a-slug",
+  "version": "0.0.1",
+  "permissions": ["contextMenus", "clipboardWrite"],
+  "background": {
+    "scripts": ["slugify.js"]
+  },
+  "manifest_version": 2
+}
