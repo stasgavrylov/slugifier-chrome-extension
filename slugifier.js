@@ -5,21 +5,21 @@ function slugifySelection({ selectionText }) {
 function copyToClipboard(text) {
   const input = document.createElement('input')
   input.value = text
-  document.body.appendChild(input)
+  document.body.append(input)
   input.select()
   document.execCommand('Copy')
-  document.body.removeChild(input)
+  input.remove()
 }
 
 function slugify(text) {
-  return text.toLowerCase().trim()
+  return text.trim().toLowerCase()
     .replace(/&/g, '-and-')
     .replace(/[\s\W-_]+/g, '-')
     .replace(/^-+|-+$/g, '')
 }
 
 chrome.contextMenus.create({
-  "title": 'Slugifier',
-  "contexts":['selection'],
-  "onclick": slugifySelection,
+  title: 'Slugifier',
+  contexts: ['selection'],
+  onclick: slugifySelection,
 })
