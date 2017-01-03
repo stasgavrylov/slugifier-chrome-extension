@@ -1,3 +1,5 @@
+'use strict'
+
 function slugifySelection({ selectionText }) {
   copyToClipboard(slugify(selectionText))
 }
@@ -14,7 +16,7 @@ function copyToClipboard(text) {
 function slugify(text) {
   return text.trim().toLowerCase()
     .replace(/&/g, '-and-')
-    .replace(/[\s\W-_]+/g, '-')
+    .replace(/[_\W]+/g, '-')
     .replace(/^-+|-+$/g, '')
 }
 
