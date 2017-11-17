@@ -15,6 +15,7 @@ function copyToClipboard(text) {
 
 function slugify(text) {
   return text.trim().toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, "")
     .replace(/&/g, '-and-')
     .replace(/[_\W]+/g, '-')
     .replace(/^-+|-+$/g, '')
